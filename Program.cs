@@ -42,9 +42,18 @@ you.Name = "You";
 me.Play(you);
 Console.WriteLine("-------------------");
 you.Play(me);
+Console.WriteLine("-------------------");
+SoreLoserPlayer whiner = new SoreLoserPlayer();
+whiner.Name = "Whiner";
+SoreLoserPlayer pouter = new SoreLoserPlayer();
+pouter.Name = "Pouter";
+whiner.Play(pouter);
+Console.WriteLine("-------------------");
+cheat.Play(whiner);
+Console.WriteLine("-------------------");
 //create list of players
 List<Player> players = new List<Player>() {
-    player1, player2, player3, large, smack, cheat, me, you
+    player1, player2, player3, large, smack, cheat, me, you, whiner, pouter
 };
 
 PlayMany(players);

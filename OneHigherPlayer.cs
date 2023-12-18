@@ -13,7 +13,19 @@ public class OneHigherPlayer : Player
 
         Console.WriteLine($"{Name} rolls a {myRoll}");
         Console.WriteLine($"{other.Name} rolls a {otherRoll}");
-        if (myRoll > otherRoll)
+        if (myRoll > otherRoll && other.GetType().ToString() == "ShootingDice.SoreLoserPlayer")
+        {
+            try 
+            {
+                int[] myNumber = [1, 2, 3];
+                Console.WriteLine(myNumber[4]);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine($"Woah woah woah woah woah what the hell, {other.Name} is supposed to win and {this.Name} is supposed to lose. What the hell!!!");
+            }
+        }
+        else if (myRoll > otherRoll)
         {
             Console.WriteLine($"{Name} Wins!");
         }

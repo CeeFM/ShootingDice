@@ -30,7 +30,21 @@ public class Player
 
         Console.WriteLine($"{Name} rolls a {myRoll}");
         Console.WriteLine($"{other.Name} rolls a {otherRoll}");
-        if (myRoll > otherRoll)
+
+        if (myRoll > otherRoll && other.GetType().ToString() == "ShootingDice.SoreLoserPlayer")
+        {
+            try 
+            {
+                int[] myNumber = [1, 2, 3];
+                Console.WriteLine(myNumber[4]);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine($"Woah woah woah woah woah what the hell, {other.Name} is supposed to win and {this.Name} is supposed to lose. What the hell!!!");
+            }
+        }
+
+        if (myRoll > otherRoll && other.GetType().ToString() != "ShootingDice.SoreLoserPlayer")
         {
             Console.WriteLine($"{Name} Wins!");
         }
@@ -38,7 +52,7 @@ public class Player
         {
             Console.WriteLine($"{other.Name} Wins!");
         }
-        else
+        else if (myRoll == otherRoll)
         {
             // if the rolls are equal it's a tie
             Console.WriteLine("It's a tie");
