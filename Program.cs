@@ -37,7 +37,7 @@ smack.Play(cheat);
 Console.WriteLine("-------------------");
 HumanPlayer me = new HumanPlayer();
 me.Name = "Me AF";
-HumanPlayer you = new HumanPlayer();
+CreativeSmackTalkingPlayer you = new CreativeSmackTalkingPlayer();
 you.Name = "You";
 me.Play(you);
 Console.WriteLine("-------------------");
