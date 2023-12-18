@@ -22,20 +22,29 @@ large.Name = "Bigun Rollsalot";
 //player 1 faces their certain doom as they play against a player with dice that are 3x as valuable as theirs in terms of score
 player1.Play(large);
 Console.WriteLine("-------------------");
+
 SmackTalkingPlayer smack = new SmackTalkingPlayer();
 smack.Name = "LoudMouth McGillicuddy";
 smack.Taunt = "look over there AHHH SYKE I'M GONNA GIT YA BUDDY";
 
-SmackTalkingPlayer clack = new SmackTalkingPlayer();
-clack.Name = "Big Talk";
-clack.Taunt = "ah yeah i'm in your head now, these are not the droids you're looking for boiiiiii";
+OneHigherPlayer cheat = new OneHigherPlayer();
+cheat.Name = "Big Cheater";
 
-smack.Play(clack);
+cheat.Play(smack);
+Console.WriteLine("-------------------");
+smack.Play(cheat);
 
 Console.WriteLine("-------------------");
+HumanPlayer me = new HumanPlayer();
+me.Name = "Me AF";
+HumanPlayer you = new HumanPlayer();
+you.Name = "You";
+me.Play(you);
+Console.WriteLine("-------------------");
+you.Play(me);
 //create list of players
 List<Player> players = new List<Player>() {
-    player1, player2, player3, large, smack, clack
+    player1, player2, player3, large, smack, cheat, me, you
 };
 
 PlayMany(players);
