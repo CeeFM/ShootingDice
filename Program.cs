@@ -51,9 +51,17 @@ whiner.Play(bigRoller);
 Console.WriteLine("-------------------");
 cheat.Play(whiner);
 Console.WriteLine("-------------------");
+SoreLoserUpperHalfPlayer bigPouter = new SoreLoserUpperHalfPlayer();
+bigPouter.Name = "Big Pouter";
+Player biggerPouter = new Player();
+biggerPouter.Name = "Even Bigger Pouter";
+bigPouter.Play(biggerPouter);
+Console.WriteLine("-------------------");
+biggerPouter.Play(bigPouter);
+Console.WriteLine("-------------------");
 //create list of players
 List<Player> players = new List<Player>() {
-    player1, player2, player3, large, smack, cheat, me, you, whiner, bigRoller
+    player1, player2, player3, large, smack, cheat, me, you, whiner, bigRoller, bigPouter, biggerPouter
 };
 
 PlayMany(players);
